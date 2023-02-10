@@ -14,19 +14,26 @@
         <!-- Los inputs tiene tipos, por defecto son de tipo
         text pero hay mas -->
         <p>
-          <input type="text" name="name" placeholder="Ingresa tu nombre" />
+          <input type="text" name="name" placeholder="Ingresa tu nombre" autocomplete="off" required />
         </p>
 
         <p>
-          <input type="email" name="email" placeholder="Ingresa tu correo" />
+          <input type="email" name="email" placeholder="Ingresa tu correo" readonly value="linder@gmail.com" />
         </p>
 
         <p>
-          <input type="password" name="password" placeholder="Escribe una contraseña segura" />
+          <input type="password" name="password" placeholder="Escribe una contraseña segura" disabled />
         </p>
 
         <p>
-          <input type="file" name="image"/>
+          <!-- 
+            video/*
+            audio/*
+            pdf/*
+            mp3/*
+            image/*
+           -->
+          <input type="file" accept="image/*" name="image"/>
         </p>
 
         <p>
@@ -57,6 +64,9 @@
         </p>
         <p>
           <input type="radio" name="option" checked /> Option 3
+        </p>
+        <p>
+          <input type="color" name="bg_color">
         </p>
         <p>
           <button type="submit">Enviar datos</button>
