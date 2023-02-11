@@ -1,0 +1,85 @@
+/* * Es el todo */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  background-color: hsl(216, 12%, 8%);
+}
+
+.main {
+  display: flex;
+  /* para centrar de forma horizontal ------ */
+  justify-content: center;
+  /* para centrar de forma vertical | */
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 375px;
+  background-color: hsl(213, 19%, 18%);
+  padding: 25px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+img {
+  background-color: hsl(216, 12%, 54%);
+  padding: 10px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+h1 {
+  /* 100 - 900 */
+  font-weight: 700;
+}
+
+p {
+  margin-top: 15px;
+  font-weight: 200;
+  color: hsl(217, 12%, 63%);
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.rating button {
+  padding: 15px;
+  background-color: hsl(216, 12%, 54%);
+  border-radius: 50%;
+  border: none;
+  color: hsl(213, 19%, 18%);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.rating button:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: #fff;
+}
+
+.btn-submit {
+  width: 100%;
+  margin-top: 30px;
+  padding: 10px;
+  background-color: hsl(25, 97%, 53%);
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #fff;
+  color: hsl(25, 97%, 53%);
+}

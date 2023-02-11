@@ -4,25 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Document</title>
   </head>
+
+  <style>
+    /* p {
+      border: solid 1px red;
+      padding: 10px;
+    } */
+  </style>
+
   <body>
     <section>
-      <h1>Formularios</h1>
+      <h1 style="color: blue; font-size: 60px;">Formularios</h1>
       <!-- Sirve para crear un formulario -->
       <form>
         <!-- Los inputs tiene tipos, por defecto son de tipo
         text pero hay mas -->
         <p>
-          <input type="text" name="name" placeholder="Ingresa tu nombre" autocomplete="off" required />
+          <input type="text" class="form-input" name="name" placeholder="Ingresa tu nombre" autocomplete="off" required />
         </p>
 
         <p>
-          <input type="email" name="email" placeholder="Ingresa tu correo" readonly value="linder@gmail.com" />
+          <input type="email" class="form-input" name="email" placeholder="Ingresa tu correo" readonly value="linder@gmail.com" />
         </p>
 
         <p>
-          <input type="password" name="password" placeholder="Escribe una contraseña segura" disabled />
+          <input type="password" class="form-input" name="password" placeholder="Escribe una contraseña segura" disabled />
         </p>
 
         <p>
@@ -69,7 +78,7 @@
           <input type="color" name="bg_color">
         </p>
         <p>
-          <button type="submit">Enviar datos</button>
+          <button id="boton-enviar" type="submit">Enviar datos</button>
         </p>
       </form>
     </section>
