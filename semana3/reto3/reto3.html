@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./reto3.css" />
+  </head>
+  <body>
+    <main class="flex items-center justify-center">
+      <div class="container">
+        <div class="flex space-between">
+          <!-- title | modo -->
+          <h2>devfinder</h2>
+          <button class="mood flex items-center">
+            light <img width="20" height="20" src="./images/sun.png" alt="" />
+          </button>
+        </div>
+        <div class="search flex items-center justify-center">
+          <!-- buscador -->
+          <img width="20" src="./images/search.png" alt="" />
+          <input type="text" placeholder="Search Github username..." />
+          <button>Search</button>
+        </div>
+        <div class="result flex">
+          <!-- resultado de busqueda -->
+          <div>
+            <img
+              class="avatar"
+              src="https://revistabyte.es/wp-content/uploads/2018/06/github-octocat.jpg"
+              alt=""
+            />
+          </div>
+          <div class="profile">
+            <div class="flex space-between">
+              <div>
+                <h3>The Octocat</h3>
+                <p class="username">@octocat</p>
+              </div>
+              <div>
+                <p class="date">Joined 25 Jan 2011</p>
+              </div>
+            </div>
+            <p class="about mt-20">This profile has no bio.</p>
+            <div class="stats flex mt-20">
+              <div>
+                <h6>Repos</h6>
+                <p>8</p>
+              </div>
+              <div>
+                <h6>Followers</h6>
+                <p>3938</p>
+              </div>
+              <div>
+                <h6>Following</h6>
+                <p>9</p>
+              </div>
+            </div>
+            <div class="social flex space-between items-center mt-20">
+              <div>
+                <img width="15" src="./images/marker.png" alt="" />
+                <span>San Francisco</span>
+              </div>
+              <div>
+                <img width="15" src="./images/twitter.png" alt="" />
+                <span>Not avaibable</span>
+              </div>
+            </div>
+            <div class="social flex space-between items-center mt-20">
+              <div>
+                <img width="15" src="./images/link.png" alt="" />
+                <span>https://github.blog</span>
+              </div>
+              <div>
+                <img width="15" src="./images/building.png" alt="" />
+                <span>@github</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

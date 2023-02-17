@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+}
+
+main {
+  display: flex;
+  /* Ojo las propiedas que vamos a ver depende que el display sea flex */
+
+  /* Permite manejar la alineacion de forma horizontal 
+  space-between
+  space-around
+  space-evenly
+  center
+  */
+  justify-content: space-around;
+
+  /* Permite manejar la alineacioon de forma vertical */
+  align-items: center;
+  /* Dar un espacio entre elementos */
+  gap: 5px;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+
+div {
+  border-radius: 12px;
+  margin-top: 20px;
+  text-align: center;
+  padding: 20px;
+  width: 1fr;
+  box-shadow: 2px 16px 161px -3px rgba(189, 189, 189, 0.75);
+}
+
+img {
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
+}
