@@ -102,6 +102,39 @@ a {
   font-weight: 100;
 }
 
+.posts {
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-between;
+  margin-bottom: 130px;
+}
+
+.posts section {
+  display: flex;
+  gap: 20px;
+}
+
+.posts img {
+  width: 100px;
+}
+
+.posts h3 {
+  color: hsl(233, 8%, 79%);
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+.posts h5 {
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.posts p {
+  width: 60%;
+  margin-top: 20px;
+  color: hsl(233, 8%, 79%);
+}
+
 @media screen and (max-width: 480px) {
   main {
     margin: 20px;
