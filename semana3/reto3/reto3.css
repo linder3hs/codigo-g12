@@ -3,10 +3,20 @@
   padding: 0;
 }
 
-body {
-  font-family: monospace, sans-serif;
+.primary-color {
   background-color: #101b40;
+}
+
+.secondary-color {
+  background-color: #313e67;
+}
+
+.text-white {
   color: #fff;
+}
+
+.primary-font {
+  font-family: monospace, sans-serif;
 }
 
 .flex {
@@ -29,6 +39,18 @@ body {
   margin-top: 20px;
 }
 
+.mt-30 {
+  margin-top: 30px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.text-dark {
+  color: #ccc;
+}
+
 main {
   height: 100vh;
 }
@@ -37,36 +59,42 @@ main {
   width: 600px;
 }
 
-.mood {
-  background: transparent;
-  color: #fff;
-  font-family: monospace, sans-serif;
-  text-transform: uppercase;
+.border-none {
   border: none;
-  gap: 15px;
+}
+
+.pointer {
   cursor: pointer;
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
+.mood {
+  text-transform: uppercase;
+  gap: 15px;
+}
+
 .search {
-  margin-top: 30px;
-  background-color: #313e67;
-  padding: 10px;
   border-radius: 12px;
   gap: 20px;
 }
 
-.search input {
+.flex-grow-1 {
   flex-grow: 1;
-  background-color: transparent;
-  border: none;
+}
+
+.search input {
   font-size: 18px;
-  color: #fff;
-  font-family: monospace, sans-serif;
+}
+
+.rounded-8 {
+  border-radius: 8px;
 }
 
 input::placeholder {
   color: #fff;
-  font-family: monospace, sans-serif;
 }
 
 input:focus {
@@ -74,21 +102,13 @@ input:focus {
 }
 
 .search button {
-  border: none;
-  color: #fff;
-  font-family: monospace, sans-serif;
   background-color: #2250e9;
-  padding: 10px;
-  border-radius: 8px;
   font-size: 16px;
-  cursor: pointer;
 }
 
 .result {
-  background-color: #313e67;
   padding: 30px;
   border-radius: 12px;
-  margin-top: 30px;
   gap: 30px;
 }
 
@@ -99,35 +119,19 @@ input:focus {
   border-radius: 50%;
 }
 
-.profile {
-  flex-grow: 1;
-}
-
 .username {
   color: #05133f;
   margin-top: 5px;
 }
 
 .date {
-  color: #ccc;
   font-size: 13px;
-}
-
-.about {
-  color: #ccc;
 }
 
 .stats {
   justify-content: space-around;
-  background-color: #101b40;
-  border-radius: 8px;
-  padding: 10px;
   padding-top: 15px;
   padding-bottom: 20px;
-}
-
-h6 {
-  color: #ccc;
 }
 
 .social {

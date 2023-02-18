@@ -7,23 +7,35 @@
     <title>Document</title>
     <link rel="stylesheet" href="./reto3.css" />
   </head>
-  <body>
+  <body class="primary-color text-white primary-font">
     <main class="flex items-center justify-center">
       <div class="container">
         <div class="flex space-between">
           <!-- title | modo -->
           <h2>devfinder</h2>
-          <button class="mood flex items-center">
+          <button
+            class="mood flex items-center text-white primary-font border-none pointer bg-transparent"
+          >
             light <img width="20" height="20" src="./images/sun.png" alt="" />
           </button>
         </div>
-        <div class="search flex items-center justify-center">
+        <div
+          class="search flex items-center space-between mt-30 secondary-color p-10"
+        >
           <!-- buscador -->
           <img width="20" src="./images/search.png" alt="" />
-          <input type="text" placeholder="Search Github username..." />
-          <button>Search</button>
+          <input
+            type="text"
+            class="text-white primary-font border-none bg-transparent flex-grow-1"
+            placeholder="Search Github username..."
+          />
+          <button
+            class="text-white primary-font border-none pointer p-10 rounded-8"
+          >
+            Search
+          </button>
         </div>
-        <div class="result flex">
+        <div class="result flex mt-30 secondary-color">
           <!-- resultado de busqueda -->
           <div>
             <img
@@ -32,28 +44,28 @@
               alt=""
             />
           </div>
-          <div class="profile">
+          <div class="flex-grow-1">
             <div class="flex space-between">
               <div>
                 <h3>The Octocat</h3>
                 <p class="username">@octocat</p>
               </div>
               <div>
-                <p class="date">Joined 25 Jan 2011</p>
+                <p class="date text-dark">Joined 25 Jan 2011</p>
               </div>
             </div>
-            <p class="about mt-20">This profile has no bio.</p>
-            <div class="stats flex mt-20">
+            <p class="text-dark mt-20">This profile has no bio.</p>
+            <div class="stats flex mt-20 primary-color p-10 rounded-8">
               <div>
-                <h6>Repos</h6>
+                <h6 class="text-dark">Repos</h6>
                 <p>8</p>
               </div>
               <div>
-                <h6>Followers</h6>
+                <h6 class="text-dark">Followers</h6>
                 <p>3938</p>
               </div>
               <div>
-                <h6>Following</h6>
+                <h6 class="text-dark">Following</h6>
                 <p>9</p>
               </div>
             </div>
