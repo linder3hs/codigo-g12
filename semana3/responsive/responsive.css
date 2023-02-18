@@ -1,0 +1,41 @@
+/* media query aplican estilos en base a un tamaño 
+ojo deben tener un order de meno a mayor */
+
+body {
+  background-color: red;
+}
+
+/* Telefonos */
+@media screen and (max-width: 480px) {
+  body {
+    background-color: blue;
+  }
+}
+
+/* Tablets medianas */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  body {
+    background-color: yellow;
+  }
+}
+
+/* Tablet grandes */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    background-color: green;
+  }
+}
+
+/* iPad pro | samsung tab (tablet grandes) | laptop 13 */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  body {
+    background-color: purple;
+  }
+}
+
+/* 14" en adelante */
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: fuchsia;
+  }
+}
