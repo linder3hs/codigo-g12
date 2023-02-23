@@ -7,15 +7,28 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
-.nav {
+.flex {
   display: flex;
+}
+
+.content-end {
   justify-content: end;
+}
+
+.content-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.nav {
   margin: 30px;
   height: 5vh;
 }
 
 .nav ul {
-  display: flex;
   gap: 40px;
   list-style: none;
 }
@@ -26,8 +39,24 @@ body {
   color: #000;
 }
 
-main {
+.m-auto {
   margin: auto;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.pt-30 {
+  padding-top: 30px;
+}
+
+.m-max-width {
+  max-width: 1440px;
 }
 
 .profile {
@@ -35,12 +64,7 @@ main {
 }
 
 .inner-profile {
-  display: flex;
   height: 90vh;
-  max-width: 1440px;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
   gap: 60px;
 }
 
@@ -95,4 +119,31 @@ main {
 
 .custom-shape-divider-bottom-1677119079 .shape-fill {
   fill: #ff6464;
+}
+
+.works {
+  background: url("./images/bg-works.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.challenges {
+  overflow-x: auto;
+  gap: 40px;
+}
+
+.card {
+  width: 25%;
+  min-width: 25%;
+  height: 354px;
+  background: white;
+  border-radius: 10px;
+  transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.shadow {
+  box-shadow: inset 0 -3em 3em rgba(214, 214, 214, 0.1),
+    0 0 0 0 rgb(190, 190, 190), 0.3em 0.3em 1em rgba(176, 176, 176, 0.3);
 }
