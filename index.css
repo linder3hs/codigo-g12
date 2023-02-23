@@ -129,6 +129,31 @@ body {
   height: 100vh;
 }
 
+.challenges-container {
+  position: relative;
+}
+
+.challenges-buttons {
+  position: absolute;
+  width: 100%;
+  top: 177px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.challenges-buttons button {
+  background-color: #001220;
+  padding: 15px;
+  color: #fff;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .challenges {
   gap: 40px;
   overflow-x: auto;
