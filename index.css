@@ -130,8 +130,12 @@ body {
 }
 
 .challenges {
-  overflow-x: auto;
   gap: 40px;
+  overflow-x: auto;
+}
+
+.challenges::-webkit-scrollbar {
+  display: none;
 }
 
 .card {
