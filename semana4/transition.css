@@ -1,0 +1,33 @@
+.cuadrado {
+  width: 300px;
+  height: 300px;
+  background-color: red;
+}
+
+.cuadrado:hover {
+  background-color: blue;
+  width: 600px;
+  border-radius: 50%;
+  transition: background-color 1s, width 3s, border-radius 3s;
+  /* all => todo */
+  /* transition: all 3s; */
+}
+
+.btn-hola {
+  background-color: #ad0234;
+  color: #fff;
+  margin-top: 20px;
+  padding: 10px 30px;
+  border: none;
+  transition: all ease-out 1.5s;
+}
+
+.btn-hola:hover {
+  background-color: #3cff7d;
+  color: #000;
+  font-weight: 900;
+  /* ease: es la aceleracion de la transition */
+  /* recordemos que tenemos usar los que sea compatible con
+  la mayoria de los navedores */
+  transition: all ease-out 2.5s;
+}
