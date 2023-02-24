@@ -131,12 +131,13 @@ body {
 
 .challenges-container {
   position: relative;
+  height: 85vh;
 }
 
 .challenges-buttons {
   position: absolute;
   width: 100%;
-  top: 177px;
+  top: 394px;
   display: flex;
   justify-content: space-between;
 }
@@ -157,6 +158,8 @@ body {
 .challenges {
   gap: 40px;
   overflow-x: auto;
+  scroll-behavior: smooth;
+  margin: 20px;
 }
 
 .challenges::-webkit-scrollbar {
@@ -175,4 +178,27 @@ body {
 .shadow {
   box-shadow: inset 0 -3em 3em rgba(214, 214, 214, 0.1),
     0 0 0 0 rgb(190, 190, 190), 0.3em 0.3em 1em rgba(176, 176, 176, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 60%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  object-fit: cover;
+}
+
+.card-body {
+  margin: 20px;
+}
+
+.card-body a {
+  margin-top: 15px;
+  display: block;
+  background-color: #ff6464;
+  border-radius: 20px;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
 }
