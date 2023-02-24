@@ -202,3 +202,31 @@ body {
   text-decoration: none;
   text-align: center;
 }
+
+/* Telefonos */
+@media screen and (max-width: 480px) {
+  .inner-profile {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    height: 100vh;
+    gap: 20px;
+  }
+
+  .profile-text {
+    text-align: center;
+  }
+
+  .about {
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .custom-shape-divider-bottom-1677119079 {
+    display: none;
+  }
+
+  .card {
+    width: 100%;
+    min-width: 100%;
+  }
+}

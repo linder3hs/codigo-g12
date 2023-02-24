@@ -9,17 +9,28 @@ const btnNext = document.querySelector(".btn-next");
 const btnBack = document.querySelector(".btn-back");
 
 btnNext.onclick = function () {
-  // Esto quiere decir que cuando hagamos un click en el boton con clase .btn-bnext 
+  // Esto quiere decir que cuando hagamos un click en el boton con clase .btn-bnext
   // hara lo siguiente
+  let slider = challenges.offsetWidth / 4;
+
+  if (challenges.offsetWidth <= 480) {
+    slider = challenges.offsetWidth;
+  }
 
   // challenges.offsetWidth => nos da el ancho del div challenges
   challenges.scrollBy({
-    left: challenges.offsetWidth / 4,
+    left: slider,
   });
 };
 
 btnBack.onclick = function () {
+  let slider = (challenges.offsetWidth / 4) * -1;
+
+  if (challenges.offsetWidth <= 480) {
+    slider = -challenges.offsetWidth;
+  }
+
   challenges.scrollBy({
-    left: (challenges.offsetWidth / 4) * -1,
+    left: slider,
   });
 };
