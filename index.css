@@ -98,6 +98,15 @@ body {
   width: 243px;
   height: 243px;
   object-fit: cover;
+  transform: scale(1.5) rotate(10turn);
+  transition: transform 1.5s;
+}
+
+.img-profile:hover {
+  /* transform: scale(1.3); */
+  /* transform: scale(1.3) translate(100px); */
+  transform: scale(1) rotate(1turn);
+  transition: transform 1.5s;
 }
 
 .custom-shape-divider-bottom-1677119079 {
@@ -228,5 +237,21 @@ body {
   .card {
     width: 100%;
     min-width: 100%;
+  }
+}
+
+/* animaciones */
+.text-focus-in {
+  animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
   }
 }
