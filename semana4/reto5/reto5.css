@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  color: #fff;
+}
+
+main {
+  background-color: hsl(222, 26%, 31%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+main > div {
+  min-width: 20%;
+  padding: 30px;
+}
+
+.result {
+  background-color: hsl(224, 36%, 15%);
+  text-align: right;
+  border-radius: 12px;
+}
+
+.result h1 {
+  font-size: 3em;
+}
+
+.buttons {
+  background-color: hsl(223, 31%, 20%);
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 20px;
+}
+
+button {
+  padding: 10px;
+  background-color: hsl(30, 25%, 89%);
+  border: none;
+  border-radius: 6px;
+  box-shadow: 1px -5px 12px 0px rgba(90, 90, 90, 0.75) inset;
+  font-family: "League Spartan", sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: hsl(224, 28%, 35%);
+  cursor: pointer;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: hsl(225, 21%, 49%);
+}
+
+.reset {
+  grid-column: 1 / 3;
+}
+
+.equal {
+  grid-column: 3 / 5;
+  background-color: hsl(6, 63%, 50%);
+  color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+  main > div {
+    min-width: 80%;
+  }
+}

@@ -1,0 +1,10 @@
+.grid-container {
+  display: grid;
+  /* tenemos que indicar las filas y columnas */
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(4, 100px);
+}
+
+.grid-container div {
+  border: solid;
+}

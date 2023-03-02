@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #fff;
+  font-family: monospace, sans-serif;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-areas:
+    "cabecera menu menu menu"
+    "hero hero hero hero"
+    "main main image image"
+    "main main extra extra"
+    "banner banner banner banner";
+  grid-template-rows: 10vh 60vh repeat(3, 10vh);
+}
+
+.header {
+  background-color: #00034c;
+  grid-area: cabecera;
+}
+
+.nav {
+  background-color: rgb(255, 78, 78);
+  grid-area: menu;
+}
+
+.hero {
+  background-color: rgb(17, 100, 133);
+  grid-area: hero;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main {
+  background-color: #8a8eff;
+  grid-area: main;
+}
+
+.image {
+  background-color: aquamarine;
+  grid-area: image;
+}
+
+.extra {
+  background-color: green;
+  grid-area: extra;
+}
+
+.banner {
+  background-color: rgb(234, 182, 26);
+  grid-area: banner;
+}
