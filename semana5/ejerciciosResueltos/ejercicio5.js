@@ -5,8 +5,17 @@ function esVocal(letra) {
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
 
-  
-
+  if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
+    return 'Es vocal';
+  } else if (letra.length >= 2) {
+    return 'Dato incorrecto, muy largo el texto'
+  } else {
+    return 'Dato incorrecto'
+  }
 }
 
-esVocal()
+console.log(esVocal('e'))
+console.log(esVocal('x'))
+console.log(esVocal('ae'))
+
+

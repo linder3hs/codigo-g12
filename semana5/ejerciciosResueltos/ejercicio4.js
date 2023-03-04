@@ -4,9 +4,19 @@ function esPositivo(numero) {
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
 
-  
-
-
+  if (Math.round(numero) > 0){
+    return 'Es positivo'
+  } else if (Math.round(numero) < 0) {
+    return 'Es negativo'
+  } else {
+    return false
+  }
 }
 
-esPositivo()
+const resultado1 = esPositivo(5)
+const resultado2 = esPositivo(-3)
+const resultado3 = esPositivo(0)
+
+console.log(resultado1);
+console.log(resultado2);
+console.log(resultado3);
