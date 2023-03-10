@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <div class="calculator">
+          <h6>Bill</h6>
+          <input type="text" class="mt-10 w-100" />
+          <h6 class="mt-30">Select Tip %</h6>
+          <div class="porcentage mt-10">
+            <button>5%</button>
+            <button>10%</button>
+            <button>15%</button>
+            <button>25%</button>
+            <button>50%</button>
+            <input type="text" placeholder="Custom" />
+          </div>
+          <h6 class="mt-30">Number of people</h6>
+          <input type="text" placeholder="10" class="mt-10 w-100" />
+        </div>
+        <div class="result">
+          <div class="amount">
+            <div>
+              <h6>Tip amount</h6>
+              <span>/ person</span>
+            </div>
+            <div>
+              <span class="tip result-number">$ 4.27</span>
+            </div>
+          </div>
+          <div class="amount mt-30">
+            <div>
+              <h6>Total</h6>
+              <span>/ person</span>
+            </div>
+            <div>
+              <span class="total result-number">$ 4.27</span>
+            </div>
+          </div>
+          <button class="reset">Reset</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

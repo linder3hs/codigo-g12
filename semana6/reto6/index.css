@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+button,
+input {
+  font-family: "Space Mono", monospace;
+}
+
+.main {
+  background-color: hsl(185, 41%, 84%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(183, 100%, 15%);
+}
+
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  gap: 50px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+input {
+  background-color: hsl(185, 41%, 84%);
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.porcentage {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(2, 40px);
+}
+
+button {
+  background-color: hsl(183, 100%, 15%);
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  transition: 400ms;
+}
+
+.result {
+  background-color: hsl(183, 100%, 15%);
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+}
+
+.amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+span {
+  font-size: 0.5em;
+  color: #ddd;
+}
+
+.result-number {
+  color: hsl(172, 67%, 45%);
+  font-size: 2.5em;
+  font-weight: 900;
+}
+
+.reset {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  font-weight: bold;
+  position: absolute;
+  padding: 10px;
+  bottom: 30px;
+  width: 85%;
+  text-transform: uppercase;
+}
