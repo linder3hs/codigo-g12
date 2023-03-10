@@ -49,7 +49,7 @@ input:focus {
   outline: none;
 }
 
-.porcentage {
+.percentage {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(3, 80px);

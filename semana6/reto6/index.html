@@ -19,18 +19,27 @@
       <div class="container">
         <div class="calculator">
           <h6>Bill</h6>
-          <input type="text" class="mt-10 w-100" />
+          <input type="text" id="input-bill" class="mt-10 w-100" />
           <h6 class="mt-30">Select Tip %</h6>
-          <div class="porcentage mt-10">
-            <button>5%</button>
-            <button>10%</button>
-            <button>15%</button>
-            <button>25%</button>
-            <button>50%</button>
-            <input type="text" placeholder="Custom" />
+          <div class="percentage mt-10">
+            <button id="percentage-5">5%</button>
+            <button id="percentage-10">10%</button>
+            <button onclick="calculateTip(15)">15%</button>
+            <button onclick="calculateTip(25)">25%</button>
+            <button onclick="calculateTip(50)">50%</button>
+            <input
+              type="text"
+              onkeyup="calculateTip(Number(this.value))"
+              placeholder="Custom"
+            />
           </div>
           <h6 class="mt-30">Number of people</h6>
-          <input type="text" placeholder="10" class="mt-10 w-100" />
+          <input
+            type="text"
+            id="number-people"
+            placeholder="10"
+            class="mt-10 w-100"
+          />
         </div>
         <div class="result">
           <div class="amount">
@@ -39,7 +48,7 @@
               <span>/ person</span>
             </div>
             <div>
-              <span class="tip result-number">$ 4.27</span>
+              <span class="tip result-number">S/ 0.00</span>
             </div>
           </div>
           <div class="amount mt-30">
@@ -48,7 +57,7 @@
               <span>/ person</span>
             </div>
             <div>
-              <span class="total result-number">$ 4.27</span>
+              <span class="total result-number">S/ 0.00</span>
             </div>
           </div>
           <button class="reset">Reset</button>
