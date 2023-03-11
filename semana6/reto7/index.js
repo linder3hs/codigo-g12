@@ -18,15 +18,25 @@ form.onsubmit = function (event) {
     image: image.value,
   });
 
-  moviesContainer.innerHTML += `
-    <div class="card mt-10">
-      <h4>${movieName.value}</h4>
-      <p>${description.value}</p>
-      <img width="200" src="${image.value}" />
-    </div>
-  `;
-
   movieName.value = "";
   description.value = "";
   image.value = "";
+
+  renderMovies();
 };
+
+function renderMovies() {
+  if (movies.length === 0) return;
+
+  moviesContainer.innerHTML = "";
+
+  movies.forEach((movie) => {
+    moviesContainer.innerHTML += `
+      <div class="card mt-10">
+        <h4>${movie.name}</h4>
+        <p>${movie.description}</p>
+        <img width="200" src="${movie.image}" />
+      </div>
+    `;
+  });
+}
