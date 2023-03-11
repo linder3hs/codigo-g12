@@ -1,5 +1,6 @@
 const inputBill = document.querySelector("#input-bill");
 const numberPeople = document.querySelector("#number-people");
+const custom = document.querySelector(".custom");
 
 const percentageFive = document.querySelector("#percentage-5");
 const percentageTen = document.querySelector("#percentage-10");
@@ -31,6 +32,7 @@ percentageTen.onclick = () => calculateTip(10);
 reset.onclick = () => {
   inputBill.value = "";
   numberPeople.value = "";
+  custom.value = "";
   tip.textContent = "S/ 0.00";
   total.textContent = "S/ 0.00";
   inputBill.focus();

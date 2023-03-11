@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>Codigo - Peliculas</h1>
+        <form action="">
+          <div>
+            <input id="name" type="text" placeholder="Nombre:" required />
+          </div>
+          <div>
+            <textarea
+              name=""
+              placeholder="Descripcion"
+              id="description"
+              cols="30"
+              rows="10"
+              required
+            ></textarea>
+          </div>
+          <div>
+            <input type="text" required id="image" placeholder="Imagen" />
+          </div>
+          <div>
+            <button type="submit">Guardar</button>
+          </div>
+        </form>
+      </div>
+      <div class="mt-30">
+        <h2>Catalogo de Peliculas</h2>
+        <div class="movies mt-30"></div>
+      </div>
+    </main>
+  </body>
+</html>

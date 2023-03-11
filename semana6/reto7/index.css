@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, sans-serif;
+  background-color: #ddd;
+}
+
+main {
+  margin: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input,
+textarea {
+  border: none;
+  background-color: #fff;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  resize: none;
+  font-family: -apple-system, sans-serif;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+button {
+  background-color: rgba(255, 239, 10, 0.824);
+  padding: 10px;
+  width: 107%;
+  border: solid 1.5px #000;
+  border-radius: 4px;
+  font-family: -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: 1.1em;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(auto, 300px));
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  margin-top: 25px;
+}
+
+.card img {
+  width: 100%;
+}
