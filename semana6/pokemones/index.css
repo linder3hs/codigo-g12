@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 20px;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.card {
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.card h3 {
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.card a {
+  text-decoration: none;
+  background-color: cornflowerblue;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 8px;
+  display: block;
+  margin-top: 20px;
+}

@@ -9,22 +9,6 @@ const moviesContainer = document.querySelector(".movies");
 // array vacio
 const movies = [];
 
-form.onsubmit = function (event) {
-  event.preventDefault();
-
-  movies.push({
-    name: movieName.value,
-    description: description.value,
-    image: image.value,
-  });
-
-  movieName.value = "";
-  description.value = "";
-  image.value = "";
-
-  renderMovies();
-};
-
 function renderMovies() {
   if (movies.length === 0) return;
 
@@ -40,3 +24,19 @@ function renderMovies() {
     `;
   });
 }
+
+form.onsubmit = function (event) {
+  event.preventDefault();
+
+  movies.push({
+    name: movieName.value,
+    description: description.value,
+    image: image.value,
+  });
+
+  movieName.value = "";
+  description.value = "";
+  image.value = "";
+
+  renderMovies();
+};
