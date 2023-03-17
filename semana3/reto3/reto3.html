@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/linder3hs/codigo-g12-css/base.css"
     />
+    <script src="./reto3.js" defer></script>
   </head>
   <body class="primary-color text-white primary-font">
     <main class="flex items-center justify-center">
@@ -28,11 +29,13 @@
           <!-- buscador -->
           <img width="20" src="./images/search.png" alt="" />
           <input
+            id="username"
             type="text"
             class="text-white primary-font border-none bg-transparent flex-grow-1"
             placeholder="Search Github username..."
           />
           <button
+            id="btn-search"
             class="text-white primary-font border-none pointer p-10 rounded-8"
           >
             Search
@@ -42,6 +45,7 @@
           <!-- resultado de busqueda -->
           <div>
             <img
+              id="avatar"
               class="avatar"
               src="https://revistabyte.es/wp-content/uploads/2018/06/github-octocat.jpg"
               alt=""
@@ -50,7 +54,7 @@
           <div class="flex-grow-1">
             <div class="flex space-between">
               <div>
-                <h3>The Octocat</h3>
+                <h3 id="name">The Octocat</h3>
                 <p class="username">@octocat</p>
               </div>
               <div>
