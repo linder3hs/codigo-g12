@@ -24,6 +24,28 @@ async function deleteTask(element) {
   // element.parentElement.parentElement.parentElement.style.display = "none";
 }
 
+async function updateTask(id) {
+  const newText = prompt("Ingrese el nuevo texto de la tarea");
+
+  const response = await fetch(`${apiURL}/${id}`, {
+    method: "PUT",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({
+      name: newText,
+    }),
+  });
+
+  if (!response.ok) {
+    alert("Hubo un error");
+    return;
+  }
+
+  const textTask = document.querySelector(`#name-${id}`);
+  textTask.textContent = newText; 
+}
+
 // crear una funcion que liste (get) las tareas
 async function getTasks() {
   const response = await fetch(apiURL);
@@ -34,11 +56,11 @@ async function getTasks() {
       <div class="card mt-3">
         <div class="card-body">
           <div>
-            <h4>${task.name}</h4>
+            <h4 id="name-${task.id}">${task.name}</h4>
           </div>
           <div>
             <button class="btn btn-primary">Terminado</button>
-            <button class="btn btn-warning">Editar</button>
+            <button onclick="updateTask('${task.id}')" class="btn btn-warning">Editar</button>
             <button onclick="deleteTask(this)" data-id="${task.id}" class="btn btn-danger">Eliminar</button>
           </div>
         </div>
