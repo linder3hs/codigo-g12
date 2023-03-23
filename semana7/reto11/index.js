@@ -19,7 +19,9 @@ async function deleteTask(element) {
     return;
   }
 
-  console.log(response);
+  // element = button
+  element.closest(".card").style.display = "none";
+  // element.parentElement.parentElement.parentElement.style.display = "none";
 }
 
 // crear una funcion que liste (get) las tareas
@@ -64,7 +66,18 @@ form.onsubmit = async function (event) {
   });
   const data = await response.json();
 
-  tasks.innerHTML += `<h2>${data.name}</h2>`;
+  tasks.innerHTML += `<div class="card mt-3">
+        <div class="card-body">
+          <div>
+            <h4>${data.name}</h4>
+          </div>
+          <div>
+            <button class="btn btn-primary">Terminado</button>
+            <button class="btn btn-warning">Editar</button>
+            <button onclick="deleteTask(this)" data-id="${data.id}" class="btn btn-danger">Eliminar</button>
+          </div>
+        </div>
+      </div>`;
 
   console.log(data);
 };
