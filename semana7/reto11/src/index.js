@@ -31,15 +31,27 @@ async function updateTask(id) {
   textTask.textContent = newText;
 }
 
+async function endTask(id) {
+  const ok = await put(id, { status: 2 });
+
+  if (!ok) {
+    alert("Hubo un error");
+    return;
+  }
+
+  const card = document.querySelector(`#card-${id}`);
+  card.classList.add("bg-success");
+}
+
 function renderTask(task) {
   return `
-      <div class="card mt-3">
+      <div id="card-${task.id}" class="card mt-3">
         <div class="card-body">
           <div>
             <h4 id="name-${task.id}">${task.name}</h4>
           </div>
           <div>
-            <button class="btn btn-primary">Terminado</button>
+            <button onclick="endTask('${task.id}')" class="btn btn-primary">Terminado</button>
             <button onclick="updateTask('${task.id}')" class="btn btn-warning">Editar</button>
             <button onclick="deleteTask(this)" data-id="${task.id}" class="btn btn-danger">Eliminar</button>
           </div>
