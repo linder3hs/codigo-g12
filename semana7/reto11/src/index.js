@@ -2,19 +2,10 @@ const form = document.querySelector("form");
 const input = document.querySelector("input");
 const tasks = document.querySelector(".tasks");
 
-const apiURL = "https://641523a24f32ca32918f7b1f.mockapi.io/tasks";
-
 async function deleteTask(element) {
-  const id = element.dataset.id;
+  const ok = await destroy(element.dataset.id);
 
-  const response = await fetch(`${apiURL}/${id}`, {
-    method: "DELETE",
-    headers: {
-      "content-type": "application/json",
-    },
-  });
-
-  if (!response.ok) {
+  if (!ok) {
     alert("algo salio mal");
     return;
   }
@@ -27,17 +18,11 @@ async function deleteTask(element) {
 async function updateTask(id) {
   const newText = prompt("Ingrese el nuevo texto de la tarea");
 
-  const response = await fetch(`${apiURL}/${id}`, {
-    method: "PUT",
-    headers: {
-      "content-type": "application/json",
-    },
-    body: JSON.stringify({
-      name: newText,
-    }),
+  const ok = await put(id, {
+    name: newText,
   });
 
-  if (!response.ok) {
+  if (!ok) {
     alert("Hubo un error");
     return;
   }
@@ -64,8 +49,7 @@ function renderTask(task) {
 
 // crear una funcion que liste (get) las tareas
 async function getTasks() {
-  const response = await fetch(apiURL);
-  const data = await response.json();
+  const data = await get();
 
   data.forEach((task) => {
     tasks.innerHTML += renderTask(task);
@@ -80,17 +64,10 @@ form.onsubmit = async function (event) {
 
   if (!input.value) return;
 
-  const response = await fetch(apiURL, {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-    },
-    body: JSON.stringify({
-      name: input.value,
-      status: 1,
-    }),
+  const data = await post({
+    name: input.value,
+    status: 1,
   });
-  const data = await response.json();
 
   tasks.innerHTML += renderTask(data);
 
