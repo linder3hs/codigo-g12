@@ -1,8 +1,14 @@
 const form = document.querySelector("form");
 const input = document.querySelector("input");
 const tasks = document.querySelector(".tasks");
+const backdrop = document.querySelector(".backdrop-container");
+
+function showOrHideBackDrop(show = true) {
+  backdrop.style.display = show ? "block" : "none";
+}
 
 async function deleteTask(element) {
+  showOrHideBackDrop();
   const ok = await destroy(element.dataset.id);
 
   if (!ok) {
@@ -12,6 +18,7 @@ async function deleteTask(element) {
 
   // element = button
   element.closest(".card").style.display = "none";
+  showOrHideBackDrop(false);
   // element.parentElement.parentElement.parentElement.style.display = "none";
 }
 
