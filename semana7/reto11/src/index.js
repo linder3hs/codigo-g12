@@ -48,7 +48,8 @@ async function endTask(id) {
 function renderTask(task) {
   return `
       <div id="card-${task.id}" class="card mt-3 ${
-    task.status === 2 ? `bg-success-subtle` : ``}">
+    task.status === 2 ? `bg-success-subtle` : ``
+  }">
         <div class="card-body">
           <div>
             <h4 id="name-${task.id}">${task.name}</h4>
@@ -84,11 +85,19 @@ form.onsubmit = async function (event) {
 
   if (!input.value) return;
 
+  const tasksList = await get();
+  const search = tasksList.find((task) => task.name === input.value);
+
+  if (search) {
+    alert("La tarea ya existe");
+    return;
+  }
+
   const data = await post({
     name: input.value,
     status: 1,
   });
 
-  tasks.innerHTML += renderTask(data);
   input.value = "";
+  tasks.innerHTML += renderTask(data);
 };
