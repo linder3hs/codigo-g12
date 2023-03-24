@@ -2,9 +2,13 @@ const form = document.querySelector("form");
 const input = document.querySelector("input");
 const tasks = document.querySelector(".tasks");
 const backdrop = document.querySelector(".backdrop-container");
+const body = document.querySelector("body");
+const backdropChild = document.querySelector(".backdrop");
 
 function showOrHideBackDrop(show = true) {
   backdrop.style.display = show ? "block" : "none";
+  backdropChild.style.height = `${body.offsetHeight}px`;
+  body.style.overflow = show ? "hidden" : "auto";
 }
 
 async function deleteTask(element) {
@@ -39,6 +43,7 @@ async function updateTask(id) {
 }
 
 async function endTask(id) {
+  showOrHideBackDrop();
   const ok = await put(id, { status: 2 });
 
   if (!ok) {
@@ -50,6 +55,7 @@ async function endTask(id) {
   const cardButtons = document.querySelector(`#card-buttons-${id}`);
   card.classList.add("bg-success-subtle");
   cardButtons.remove();
+  showOrHideBackDrop(false);
 }
 
 function renderTask(task) {
@@ -75,11 +81,17 @@ function renderTask(task) {
       </div>`;
 }
 
+function orderArray(array) {
+  return array.sort((a, b) => a.name.localeCompare(b.name));
+}
+
 // crear una funcion que liste (get) las tareas
 async function getTasks() {
   const data = await get();
-
-  data.forEach((task) => {
+  console.log(data)
+  const order = orderArray(data);
+  console.log(order);
+  order.forEach((task) => {
     tasks.innerHTML += renderTask(task);
   });
 }
