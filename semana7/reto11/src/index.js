@@ -40,21 +40,29 @@ async function endTask(id) {
   }
 
   const card = document.querySelector(`#card-${id}`);
-  card.classList.add("bg-success");
+  const cardButtons = document.querySelector(`#card-buttons-${id}`);
+  card.classList.add("bg-success-subtle");
+  cardButtons.remove();
 }
 
 function renderTask(task) {
   return `
-      <div id="card-${task.id}" class="card mt-3">
+      <div id="card-${task.id}" class="card mt-3 ${
+    task.status === 2 ? `bg-success-subtle` : ``}">
         <div class="card-body">
           <div>
             <h4 id="name-${task.id}">${task.name}</h4>
           </div>
-          <div>
-            <button onclick="endTask('${task.id}')" class="btn btn-primary">Terminado</button>
-            <button onclick="updateTask('${task.id}')" class="btn btn-warning">Editar</button>
-            <button onclick="deleteTask(this)" data-id="${task.id}" class="btn btn-danger">Eliminar</button>
-          </div>
+          ${
+            task.status !== 2
+              ? `
+            <div id="card-buttons-${task.id}">
+              <button onclick="endTask('${task.id}')" class="btn btn-primary">Terminado</button>
+              <button onclick="updateTask('${task.id}')" class="btn btn-warning">Editar</button>
+              <button onclick="deleteTask(this)" data-id="${task.id}" class="btn btn-danger">Eliminar</button>
+            </div>`
+              : ``
+          }
         </div>
       </div>`;
 }
@@ -82,6 +90,5 @@ form.onsubmit = async function (event) {
   });
 
   tasks.innerHTML += renderTask(data);
-
-  console.log(data);
+  input.value = "";
 };
